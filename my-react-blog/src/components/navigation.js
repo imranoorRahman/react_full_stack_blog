@@ -20,7 +20,7 @@ const navLinks = [
   },
 ];
 
-export default function Navigation() {
+export default function Navigation({ user }) {
   return (
     <nav className="site-navigation">
       <span className="menu-title">Imran's React Blog</span>
@@ -32,10 +32,14 @@ export default function Navigation() {
             </li>
           ))}
         </ul>
-        <Avatar
-          src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
-          size={38}
-        />
+        <span>
+          <Avatar
+            src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
+            size={38}
+          />
+
+          <span className="menu-avatar-name">{`${user.firstName} ${user.lastName}`}</span>
+        </span>
       </div>
     </nav>
   );
