@@ -44,8 +44,10 @@
     margin-block-end: 0;
     padding-inline-start: 0;
     display: flex;
+    justify-content: flex-end;
     align-items: center;
     list-style-type: none;
+    padding: 0 20px 0 50px;
 
     a {
       text-decoration: none;
@@ -71,6 +73,27 @@
       left: -300px;
       left: 0px;
       transition: 300ms ease left;
+      flex-direction: column-reverse;
+      padding: 0;
+
+      a {
+        width: 100%;
+        padding: 0;
+      }
+      ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 0;
+      }
+
+      ul,
+      li {
+        width: 100%;
+      }
+
+      &.action {
+        left: 0px;
+      }
     }
     .ion-ios-menu {
       display: flex;
