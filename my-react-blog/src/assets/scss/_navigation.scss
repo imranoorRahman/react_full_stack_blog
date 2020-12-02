@@ -28,14 +28,14 @@
       font-size: 18px;
       margin-left: 15px;
     }
+  }
 
-    .ion-ios-menu {
-      font-size: 36px;
-      width: 65px;
-      align-items: center;
-      cursor: pointer;
-      display: none;
-    }
+  .ion-ios-menu {
+    font-size: 36px;
+    width: 65px;
+    align-items: center;
+    cursor: pointer;
+    display: none;
   }
 
   ul {
@@ -71,27 +71,40 @@
       position: absolute;
       top: 65px;
       left: -300px;
-      left: 0px;
       transition: 300ms ease left;
       flex-direction: column-reverse;
       padding: 0;
+      padding-left: 30px;
 
       a {
         width: 100%;
         padding: 0;
       }
+
+      li {
+        height: 65px;
+        display: flex;
+        align-items: center;
+      }
+
       ul {
         flex-direction: column;
         justify-content: flex-start;
         padding: 0;
+        padding-top: 20px;
       }
 
       ul,
-      li {
+      li,
+      .menu-avatar-container {
         width: 100%;
       }
 
-      &.action {
+      .menu-avatar-container {
+        padding-top: 20px;
+      }
+
+      &.active {
         left: 0px;
       }
     }

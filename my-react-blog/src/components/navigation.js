@@ -33,7 +33,7 @@ export default function Navigation({ user }) {
             </li>
           ))}
         </ul>
-        <span>
+        <span className="menu-avatar-container">
           <Avatar
             src="https://zos.alipayobjects.com/rmsportal/ODTLcjxAfvqbxHnVXCYX.png"
             size={38}
@@ -41,11 +41,11 @@ export default function Navigation({ user }) {
 
           <span className="menu-avatar-name">{`${user.firstName} ${user.lastName}`}</span>
         </span>
-        <i
-          className="ionicons icon ion-ios-menu"
-          onClick={() => setMenuActive(!menuActive)}
-        />
       </div>
+      <i
+        className="ionicons icon ion-ios-menu"
+        onClick={() => setMenuActive(!menuActive)}
+      />
     </nav>
   );
 }
